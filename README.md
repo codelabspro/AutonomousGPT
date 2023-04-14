@@ -1,25 +1,25 @@
-# Auto-GPT: An Autonomous GPT-4 Experiment
+# AutonomousGPT: An Autonomous GPT-4 Experiment
 
-![GitHub Repo stars](https://img.shields.io/github/stars/Torantulino/auto-gpt?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/Torantulino/AutonomousGPT?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/siggravitas?style=social)](https://twitter.com/SigGravitas)
-[![Discord Follow](https://dcbadge.vercel.app/api/server/autonmousgpt?style=flat)](https://discord.gg/autonmousgpt)
-[![Unit Tests](https://github.com/Torantulino/Auto-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/Torantulino/Auto-GPT/actions/workflows/ci.yml)
+[![Discord Follow](https://dcbadge.vercel.app/api/server/autogpt?style=flat)](https://discord.gg/autogpt)
+[![Unit Tests](https://github.com/Torantulino/AutonomousGPT/actions/workflows/ci.yml/badge.svg)](https://github.com/Torantulino/AutonomousGPT/actions/workflows/ci.yml)
 
-Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
+AutonomousGPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, AutonomousGPT pushes the boundaries of what is possible with AI.
 
 ### Demo (30/03/2023):
 
 https://user-images.githubusercontent.com/22963551/228855501-2f5777cf-755b-4407-a643-c7299e5b6419.mp4
 
-<h2 align="center"> 💖 Help Fund Auto-GPT's Development 💖</h2>
+<h2 align="center"> 💖 Help Fund AutonomousGPT's Development 💖</h2>
 <p align="center">
-If you can spare a coffee, you can help to cover the API costs of developing Auto-GPT and help push the boundaries of fully autonomous AI!
+If you can spare a coffee, you can help to cover the API costs of developing AutonomousGPT and help push the boundaries of fully autonomous AI!
 A full day of development can easily cost as much as $20 in API costs, which for a free project is quite limiting.
 Your support is greatly appreciated
 </p>
 
 <p align="center">
- Development of this free, open-source project is made possible by all the <a href="https://github.com/Torantulino/Auto-GPT/graphs/contributors">contributors</a> and <a href="https://github.com/sponsors/Torantulino">sponsors</a>. If you'd like to sponsor this project and have your avatar or company logo appear below <a href="https://github.com/sponsors/Torantulino">click here</a>.
+ Development of this free, open-source project is made possible by all the <a href="https://github.com/Torantulino/AutonomousGPT/graphs/contributors">contributors</a> and <a href="https://github.com/sponsors/Torantulino">sponsors</a>. If you'd like to sponsor this project and have your avatar or company logo appear below <a href="https://github.com/sponsors/Torantulino">click here</a>.
 
 <h3 align="center">Individual Sponsors</h3>
 <p align="center">
@@ -30,7 +30,7 @@ Your support is greatly appreciated
 
 ## Table of Contents
 
-- [Auto-GPT: An Autonomous GPT-4 Experiment](#auto-gpt-an-autonomous-gpt-4-experiment)
+- [AutonomousGPT: An Autonomous GPT-4 Experiment](#AutonomousGPT-an-autonomous-gpt-4-experiment)
   - [Demo (30/03/2023):](#demo-30032023)
   - [Table of Contents](#table-of-contents)
   - [🚀 Features](#-features)
@@ -79,7 +79,7 @@ Optional:
 
 ## 💾 Installation
 
-To install Auto-GPT, follow these steps:
+To install AutonomousGPT, follow these steps:
 
 1. Make sure you have all the **requirements** above, if not, install/get them.
 
@@ -89,14 +89,14 @@ _The following commands should be executed in a CMD, Bash or Powershell window. 
    For this step you need Git installed, but you can just download the zip file instead by clicking the button at the top of this page ☝️
 
 ```
-git clone https://github.com/Torantulino/Auto-GPT.git
+git clone https://github.com/Torantulino/AutonomousGPT.git
 ```
 
 3. Navigate to the project directory:
    _(Type this into your CMD window, you're aiming to navigate the CMD window to the repository you just downloaded)_
 
 ```
-cd 'Auto-GPT'
+cd 'AutonomousGPT'
 ```
 
 4. Install the required dependencies:
@@ -136,7 +136,7 @@ You will find activity and error logs in the folder `./output/logs`
 To output debug logs:
 
 ```
-python -m autonmousgpt --debug
+python -m autogpt --debug
 ```
 
 ### Docker
@@ -144,29 +144,29 @@ python -m autonmousgpt --debug
 You can also build this into a docker image and run it:
 
 ```
-docker build -t autonmousgpt .
-docker run -it --env-file=./.env -v $PWD/auto_gpt_workspace:/app/auto_gpt_workspace autonmousgpt
+docker build -t autogpt .
+docker run -it --env-file=./.env -v $PWD/auto_gpt_workspace:/app/auto_gpt_workspace autogpt
 ```
 
 You can pass extra arguments, for instance, running with `--gpt3only` and `--continuous` mode:
 ```
-docker run -it --env-file=./.env -v $PWD/auto_gpt_workspace:/app/auto_gpt_workspace autonmousgpt --gpt3only --continuous
+docker run -it --env-file=./.env -v $PWD/auto_gpt_workspace:/app/auto_gpt_workspace autogpt --gpt3only --continuous
 ```
 ### Command Line Arguments
-Here are some common arguments you can use when running Auto-GPT:
+Here are some common arguments you can use when running AutonomousGPT:
 > Replace anything in angled brackets (<>) to a value you want to specify
 * `python scripts/main.py --help` to see a list of all available command line arguments.
-* `python scripts/main.py --ai-settings <filename>` to run Auto-GPT with a different AI Settings file.
+* `python scripts/main.py --ai-settings <filename>` to run AutonomousGPT with a different AI Settings file.
 * `python scripts/main.py --use-memory  <memory-backend>` to specify one of 3 memory backends: `local`, `redis`, `pinecone` or 'no_memory'.
 
 > **NOTE**: There are shorthands for some of these flags, for example `-m` for `--use-memory`. Use `python scripts/main.py --help` for more information
 
 ## 🗣️ Speech Mode
 
-Use this to use TTS for Auto-GPT
+Use this to use TTS for AutonomousGPT
 
 ```
-python -m autonmousgpt --speak
+python -m autogpt --speak
 ```
 
 ## 🔍 Google API Keys Configuration
@@ -277,7 +277,7 @@ export MEMORY_BACKEND="pinecone"
 
 ## Setting Your Cache Type
 
-By default Auto-GPT is going to use LocalCache instead of redis or Pinecone.
+By default AutonomousGPT is going to use LocalCache instead of redis or Pinecone.
 
 To switch to either, change the `MEMORY_BACKEND` env variable to the value that you want:
 
@@ -309,7 +309,7 @@ options:
 # python scripts/data_ingestion.py --dir seed_data --init --overlap 200 --max_length 1000
 ```
 
-This script located at scripts/data_ingestion.py, allows you to ingest files into memory and pre-seed it before running Auto-GPT.
+This script located at scripts/data_ingestion.py, allows you to ingest files into memory and pre-seed it before running AutonomousGPT.
 
 Memory pre-seeding is a technique that involves ingesting relevant documents or data into the AI's memory so that it can use this information to generate more informed and accurate responses.
 
@@ -318,13 +318,13 @@ To pre-seed the memory, the content of each document is split into chunks of a s
 This technique is particularly useful when working with large amounts of data or when there is specific information that the AI needs to be able to access quickly.
 By pre-seeding the memory, the AI can retrieve and use this information more efficiently, saving time, API call and improving the accuracy of its responses.
 
-You could for example download the documentation of an API, a Github repository, etc. and ingest it into memory before running Auto-GPT.
+You could for example download the documentation of an API, a Github repository, etc. and ingest it into memory before running AutonomousGPT.
 
-⚠️ If you use Redis as your memory, make sure to run Auto-GPT with the WIPE_REDIS_ON_START set to False in your .env file.
+⚠️ If you use Redis as your memory, make sure to run AutonomousGPT with the WIPE_REDIS_ON_START set to False in your .env file.
 
-⚠️For other memory backend, we currently forcefully wipe the memory when starting Auto-GPT. To ingest data with those memory backend, you can call the data_ingestion.py script anytime during an Auto-GPT run.
+⚠️For other memory backend, we currently forcefully wipe the memory when starting AutonomousGPT. To ingest data with those memory backend, you can call the data_ingestion.py script anytime during an AutonomousGPT run.
 
-Memories will be available to the AI immediately as they are ingested, even if ingested while Auto-GPT is running.
+Memories will be available to the AI immediately as they are ingested, even if ingested while AutonomousGPT is running.
 
 In the example above, the script initializes the memory, ingests all files within the seed_data directory into memory with an overlap between chunks of 200 and a maximum length of each chunk of 4000.
 Note that you can also use the --file argument to ingest a single file into memory and that the script will only ingest files within the auto_gpt_workspace directory.
@@ -342,10 +342,10 @@ Continuous mode is not recommended.
 It is potentially dangerous and may cause your AI to run forever or carry out actions you would not usually authorise.
 Use at your own risk.
 
-1. Run the `autonmousgpt` python module in your terminal:
+1. Run the `autogpt` python module in your terminal:
 
 ```
-python -m autonmousgpt --speak --continuous
+python -m autogpt --speak --continuous
 
 ```
 
@@ -353,17 +353,17 @@ python -m autonmousgpt --speak --continuous
 
 ## GPT3.5 ONLY Mode
 
-If you don't have access to the GPT4 api, this mode will allow you to use Auto-GPT!
+If you don't have access to the GPT4 api, this mode will allow you to use AutonomousGPT!
 
 ```
-python -m autonmousgpt --speak --gpt3only
+python -m autogpt --speak --gpt3only
 ```
 
 It is recommended to use a virtual machine for tasks that require high security measures to prevent any potential harm to the main computer's system and data.
 
 ## 🖼 Image Generation
 
-By default, Auto-GPT uses DALL-e for image generation. To use Stable Diffusion, a [HuggingFace API Token](https://huggingface.co/settings/tokens) is required.
+By default, AutonomousGPT uses DALL-e for image generation. To use Stable Diffusion, a [HuggingFace API Token](https://huggingface.co/settings/tokens) is required.
 
 Once you have a token, set these variables in your `.env`:
 
@@ -383,28 +383,28 @@ This experiment aims to showcase the potential of GPT-4 but comes with some limi
 ## 🛡 Disclaimer
 
 Disclaimer
-This project, Auto-GPT, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
+This project, AutonomousGPT, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
 
-The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. You are solely responsible for any decisions and actions taken based on the information provided by Auto-GPT.
+The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. You are solely responsible for any decisions and actions taken based on the information provided by AutonomousGPT.
 
 **Please note that the use of the GPT-4 language model can be expensive due to its token usage.** By utilizing this project, you acknowledge that you are responsible for monitoring and managing your own token usage and the associated costs. It is highly recommended to check your OpenAI API usage regularly and set up any necessary limits or alerts to prevent unexpected charges.
 
-As an autonomous experiment, Auto-GPT may generate content or take actions that are not in line with real-world business practices or legal requirements. It is your responsibility to ensure that any actions or decisions made based on the output of this software comply with all applicable laws, regulations, and ethical standards. The developers and contributors of this project shall not be held responsible for any consequences arising from the use of this software.
+As an autonomous experiment, AutonomousGPT may generate content or take actions that are not in line with real-world business practices or legal requirements. It is your responsibility to ensure that any actions or decisions made based on the output of this software comply with all applicable laws, regulations, and ethical standards. The developers and contributors of this project shall not be held responsible for any consequences arising from the use of this software.
 
-By using Auto-GPT, you agree to indemnify, defend, and hold harmless the developers, contributors, and any affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from your use of this software or your violation of these terms.
+By using AutonomousGPT, you agree to indemnify, defend, and hold harmless the developers, contributors, and any affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from your use of this software or your violation of these terms.
 
 ## 🐦 Connect with Us on Twitter
 
-Stay up-to-date with the latest news, updates, and insights about Auto-GPT by following our Twitter accounts. Engage with the developer and the AI's own account for interesting discussions, project updates, and more.
+Stay up-to-date with the latest news, updates, and insights about AutonomousGPT by following our Twitter accounts. Engage with the developer and the AI's own account for interesting discussions, project updates, and more.
 
 - **Developer**: Follow [@siggravitas](https://twitter.com/siggravitas) for insights into the development process, project updates, and related topics from the creator of Entrepreneur-GPT.
 - **Entrepreneur-GPT**: Join the conversation with the AI itself by following [@En_GPT](https://twitter.com/En_GPT). Share your experiences, discuss the AI's outputs, and engage with the growing community of users.
 
-We look forward to connecting with you and hearing your thoughts, ideas, and experiences with Auto-GPT. Join us on Twitter and let's explore the future of AI together!
+We look forward to connecting with you and hearing your thoughts, ideas, and experiences with AutonomousGPT. Join us on Twitter and let's explore the future of AI together!
 
 <p align="center">
-  <a href="https://star-history.com/#Torantulino/auto-gpt&Date">
-    <img src="https://api.star-history.com/svg?repos=Torantulino/auto-gpt&type=Date" alt="Star History Chart">
+  <a href="https://star-history.com/#Torantulino/AutonomousGPT&Date">
+    <img src="https://api.star-history.com/svg?repos=Torantulino/AutonomousGPT&type=Date" alt="Star History Chart">
   </a>
 </p>
 
@@ -429,8 +429,8 @@ This project uses [flake8](https://flake8.pycqa.org/en/latest/) for linting. We 
 To run the linter, run the following command:
 
 ```
-flake8 autonmousgpt/ tests/
+flake8 autogpt/ tests/
 
 # Or, if you want to run flake8 with the same configuration as the CI:
-flake8 autonmousgpt/ tests/ --select E303,W293,W291,W292,E305,E231,E302
+flake8 autogpt/ tests/ --select E303,W293,W291,W292,E305,E231,E302
 ```
