@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-from autogpt.memory import get_memory
-from autogpt.config import Config
-from autogpt.llm_utils import create_chat_completion
+from autonomousgpt.memory import get_memory
+from autonomousgpt.config import Config
+from autonomousgpt.llm_utils import create_chat_completion
 from urllib.parse import urlparse, urljoin
 
 cfg = Config()

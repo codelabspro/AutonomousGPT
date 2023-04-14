@@ -8,9 +8,9 @@ from colorama import Fore
 
 from colorama import Style
 
-from autogpt import speak
-from autogpt.config import Config
-from autogpt.config import Singleton
+from autonomousgpt import speak
+from autonomousgpt.config import Config
+from autonomousgpt.config import Singleton
 
 cfg = Config()
 

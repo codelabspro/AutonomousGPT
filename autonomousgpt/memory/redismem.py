@@ -6,8 +6,8 @@ from redis.commands.search.query import Query
 from redis.commands.search.indexDefinition import IndexDefinition, IndexType
 import numpy as np
 
-from autogpt.memory.base import MemoryProviderSingleton, get_ada_embedding
-from autogpt.logger import logger
+from autonomousgpt.memory.base import MemoryProviderSingleton, get_ada_embedding
+from autonomousgpt.logger import logger
 from colorama import Fore, Style
 
 

@@ -1,9 +1,9 @@
-from autogpt.config import Config, Singleton
+from autonomousgpt.config import Config, Singleton
 
 import pinecone
 
-from autogpt.memory.base import MemoryProviderSingleton, get_ada_embedding
-from autogpt.logger import logger
+from autonomousgpt.memory.base import MemoryProviderSingleton, get_ada_embedding
+from autonomousgpt.logger import logger
 from colorama import Fore, Style
 
 

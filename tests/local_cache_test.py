@@ -1,7 +1,7 @@
 import os
 import sys
 
-from autogpt.memory.local import LocalCache
+from autonomousgpt.memory.local import LocalCache
 
 
 def MockConfig():

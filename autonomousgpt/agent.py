@@ -1,15 +1,15 @@
-import autogpt.commands as cmd
+import autonomousgpt.commands as cmd
 import json
 import traceback
 from tkinter.ttk import Style
 
 from colorama import Fore
 
-import autogpt.chat
-from autogpt.config import Config
-from autogpt.logger import logger
-import autogpt.speak
-from autogpt.spinner import Spinner
+import autonomousgpt.chat
+from autonomousgpt.config import Config
+from autonomousgpt.logger import logger
+import autonomousgpt.speak
+from autonomousgpt.spinner import Spinner
 
 
 class Agent:

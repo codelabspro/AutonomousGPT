@@ -1,6 +1,6 @@
 import re
 import json
-from autogpt.config import Config
+from autonomousgpt.config import Config
 
 cfg = Config()
 

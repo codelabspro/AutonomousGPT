@@ -1,6 +1,6 @@
 from typing import Optional, List, Any
 
-from autogpt.memory.base import MemoryProviderSingleton
+from autonomousgpt.memory.base import MemoryProviderSingleton
 
 
 class NoMemory(MemoryProviderSingleton):

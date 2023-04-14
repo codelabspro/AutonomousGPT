@@ -1,6 +1,6 @@
 import unittest
 
-from autogpt.json_parser import fix_and_parse_json
+from autonomousgpt.json_parser import fix_and_parse_json
 
 
 class TestParseJson(unittest.TestCase):

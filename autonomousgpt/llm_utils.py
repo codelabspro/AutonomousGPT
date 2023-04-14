@@ -1,7 +1,7 @@
 import time
 import openai
 from colorama import Fore
-from autogpt.config import Config
+from autonomousgpt.config import Config
 
 cfg = Config()
 

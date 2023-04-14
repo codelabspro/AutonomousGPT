@@ -3,7 +3,7 @@
 
 import requests
 
-from autogpt.browse import scrape_text
+from autonomousgpt.browse import scrape_text
 
 """
 Code Analysis

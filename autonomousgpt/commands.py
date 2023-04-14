@@ -1,15 +1,15 @@
-from autogpt import browse
+from autonomousgpt import browse
 import json
-from autogpt.memory import get_memory
+from autonomousgpt.memory import get_memory
 import datetime
-import autogpt.agent_manager as agents
-from autogpt import speak
-from autogpt.config import Config
-import autogpt.ai_functions as ai
-from autogpt.file_operations import read_file, write_to_file, append_to_file, delete_file, search_files
-from autogpt.execute_code import execute_python_file, execute_shell
-from autogpt.json_parser import fix_and_parse_json
-from autogpt.image_gen import generate_image
+import autonomousgpt.agent_manager as agents
+from autonomousgpt import speak
+from autonomousgpt.config import Config
+import autonomousgpt.ai_functions as ai
+from autonomousgpt.file_operations import read_file, write_to_file, append_to_file, delete_file, search_files
+from autonomousgpt.execute_code import execute_python_file, execute_shell
+from autonomousgpt.json_parser import fix_and_parse_json
+from autonomousgpt.image_gen import generate_image
 from duckduckgo_search import ddg
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError

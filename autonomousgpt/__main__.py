@@ -1,22 +1,22 @@
 import json
 import random
-from autogpt import commands as cmd
-from autogpt import utils
-from autogpt.memory import get_memory, get_supported_memory_backends
-from autogpt import chat
+from autonomousgpt import commands as cmd
+from autonomousgpt import utils
+from autonomousgpt.memory import get_memory, get_supported_memory_backends
+from autonomousgpt import chat
 from colorama import Fore, Style
-from autogpt.spinner import Spinner
+from autonomousgpt.spinner import Spinner
 import time
-from autogpt import speak
-from autogpt.config import Config
-from autogpt.json_parser import fix_and_parse_json
-from autogpt.ai_config import AIConfig
+from autonomousgpt import speak
+from autonomousgpt.config import Config
+from autonomousgpt.json_parser import fix_and_parse_json
+from autonomousgpt.ai_config import AIConfig
 import traceback
 import yaml
 import argparse
-from autogpt.logger import logger
+from autonomousgpt.logger import logger
 import logging
-from autogpt.prompt import get_prompt
+from autonomousgpt.prompt import get_prompt
 
 cfg = Config()
 

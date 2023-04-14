@@ -5,5 +5,5 @@ init(autoreset=True)
 
 # Use the bold ANSI style
 print(f"""{Style.BRIGHT}Please run:
-python -m autogpt
+python -m autonomousgpt
 """)

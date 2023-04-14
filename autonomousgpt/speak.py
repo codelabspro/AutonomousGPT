@@ -1,7 +1,7 @@
 import os
 from playsound import playsound
 import requests
-from autogpt.config import Config
+from autonomousgpt.config import Config
 cfg = Config()
 import gtts
 import threading

@@ -3,8 +3,8 @@ import random
 import string
 import sys
 from pathlib import Path
-from autogpt.config import Config
-from autogpt.memory.local import LocalCache
+from autonomousgpt.config import Config
+from autonomousgpt.memory.local import LocalCache
 
 
 class TestLocalCache(unittest.TestCase):

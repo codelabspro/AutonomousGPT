@@ -1,4 +1,4 @@
-from autogpt.llm_utils import create_chat_completion
+from autonomousgpt.llm_utils import create_chat_completion
 
 next_key = 0
 agents = {}  # key, (task, full_message_history, model)

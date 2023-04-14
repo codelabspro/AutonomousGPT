@@ -1,8 +1,8 @@
 import argparse
 import logging
-from autogpt.config import Config
-from autogpt.memory import get_memory
-from autogpt.file_operations import ingest_file, search_files
+from autonomousgpt.config import Config
+from autonomousgpt.memory import get_memory
+from autonomousgpt.file_operations import ingest_file, search_files
 
 cfg = Config()
 

@@ -2,7 +2,7 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/Torantulino/auto-gpt?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/siggravitas?style=social)](https://twitter.com/SigGravitas)
-[![Discord Follow](https://dcbadge.vercel.app/api/server/autogpt?style=flat)](https://discord.gg/autogpt)
+[![Discord Follow](https://dcbadge.vercel.app/api/server/autonmousgpt?style=flat)](https://discord.gg/autonmousgpt)
 [![Unit Tests](https://github.com/Torantulino/Auto-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/Torantulino/Auto-GPT/actions/workflows/ci.yml)
 
 Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
@@ -119,11 +119,11 @@ pip install -r requirements.txt
 
 ## 🔧 Usage
 
-1. Run the `autogpt` Python module in your terminal:
+1. Run the `autonomousgpt` Python module in your terminal:
    _(Type this into your CMD window)_
 
 ```
-python -m autogpt
+python -m autonomousgpt
 ```
 
 2. After each of action, enter 'y' to authorise command, 'y -N' to run N continuous commands, 'n' to exit program, or enter additional feedback for the AI.
@@ -136,7 +136,7 @@ You will find activity and error logs in the folder `./output/logs`
 To output debug logs:
 
 ```
-python -m autogpt --debug
+python -m autonmousgpt --debug
 ```
 
 ### Docker
@@ -144,13 +144,13 @@ python -m autogpt --debug
 You can also build this into a docker image and run it:
 
 ```
-docker build -t autogpt .
-docker run -it --env-file=./.env -v $PWD/auto_gpt_workspace:/app/auto_gpt_workspace autogpt
+docker build -t autonmousgpt .
+docker run -it --env-file=./.env -v $PWD/auto_gpt_workspace:/app/auto_gpt_workspace autonmousgpt
 ```
 
 You can pass extra arguments, for instance, running with `--gpt3only` and `--continuous` mode:
 ```
-docker run -it --env-file=./.env -v $PWD/auto_gpt_workspace:/app/auto_gpt_workspace autogpt --gpt3only --continuous
+docker run -it --env-file=./.env -v $PWD/auto_gpt_workspace:/app/auto_gpt_workspace autonmousgpt --gpt3only --continuous
 ```
 ### Command Line Arguments
 Here are some common arguments you can use when running Auto-GPT:
@@ -166,7 +166,7 @@ Here are some common arguments you can use when running Auto-GPT:
 Use this to use TTS for Auto-GPT
 
 ```
-python -m autogpt --speak
+python -m autonmousgpt --speak
 ```
 
 ## 🔍 Google API Keys Configuration
@@ -293,7 +293,7 @@ To switch to either, change the `MEMORY_BACKEND` env variable to the value that 
 ## 🧠 Memory pre-seeding
 
 ```
-# python scripts/data_ingestion.py -h 
+# python scripts/data_ingestion.py -h
 usage: data_ingestion.py [-h] (--file FILE | --dir DIR) [--init] [--overlap OVERLAP] [--max_length MAX_LENGTH]
 
 Ingest a file or a directory with multiple files into memory. Make sure to set your .env before running this script.
@@ -309,20 +309,20 @@ options:
 # python scripts/data_ingestion.py --dir seed_data --init --overlap 200 --max_length 1000
 ```
 
-This script located at scripts/data_ingestion.py, allows you to ingest files into memory and pre-seed it before running Auto-GPT. 
+This script located at scripts/data_ingestion.py, allows you to ingest files into memory and pre-seed it before running Auto-GPT.
 
 Memory pre-seeding is a technique that involves ingesting relevant documents or data into the AI's memory so that it can use this information to generate more informed and accurate responses.
 
 To pre-seed the memory, the content of each document is split into chunks of a specified maximum length with a specified overlap between chunks, and then each chunk is added to the memory backend set in the .env file. When the AI is prompted to recall information, it can then access those pre-seeded memories to generate more informed and accurate responses.
 
-This technique is particularly useful when working with large amounts of data or when there is specific information that the AI needs to be able to access quickly. 
-By pre-seeding the memory, the AI can retrieve and use this information more efficiently, saving time, API call and improving the accuracy of its responses. 
+This technique is particularly useful when working with large amounts of data or when there is specific information that the AI needs to be able to access quickly.
+By pre-seeding the memory, the AI can retrieve and use this information more efficiently, saving time, API call and improving the accuracy of its responses.
 
-You could for example download the documentation of an API, a Github repository, etc. and ingest it into memory before running Auto-GPT. 
+You could for example download the documentation of an API, a Github repository, etc. and ingest it into memory before running Auto-GPT.
 
 ⚠️ If you use Redis as your memory, make sure to run Auto-GPT with the WIPE_REDIS_ON_START set to False in your .env file.
 
-⚠️For other memory backend, we currently forcefully wipe the memory when starting Auto-GPT. To ingest data with those memory backend, you can call the data_ingestion.py script anytime during an Auto-GPT run. 
+⚠️For other memory backend, we currently forcefully wipe the memory when starting Auto-GPT. To ingest data with those memory backend, you can call the data_ingestion.py script anytime during an Auto-GPT run.
 
 Memories will be available to the AI immediately as they are ingested, even if ingested while Auto-GPT is running.
 
@@ -342,10 +342,10 @@ Continuous mode is not recommended.
 It is potentially dangerous and may cause your AI to run forever or carry out actions you would not usually authorise.
 Use at your own risk.
 
-1. Run the `autogpt` python module in your terminal:
+1. Run the `autonmousgpt` python module in your terminal:
 
 ```
-python -m autogpt --speak --continuous
+python -m autonmousgpt --speak --continuous
 
 ```
 
@@ -356,7 +356,7 @@ python -m autogpt --speak --continuous
 If you don't have access to the GPT4 api, this mode will allow you to use Auto-GPT!
 
 ```
-python -m autogpt --speak --gpt3only
+python -m autonmousgpt --speak --gpt3only
 ```
 
 It is recommended to use a virtual machine for tasks that require high security measures to prevent any potential harm to the main computer's system and data.
@@ -429,8 +429,8 @@ This project uses [flake8](https://flake8.pycqa.org/en/latest/) for linting. We 
 To run the linter, run the following command:
 
 ```
-flake8 autogpt/ tests/
+flake8 autonmousgpt/ tests/
 
 # Or, if you want to run flake8 with the same configuration as the CI:
-flake8 autogpt/ tests/ --select E303,W293,W291,W292,E305,E231,E302
+flake8 autonmousgpt/ tests/ --select E303,W293,W291,W292,E305,E231,E302
 ```

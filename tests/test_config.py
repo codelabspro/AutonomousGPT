@@ -1,5 +1,5 @@
 import unittest
-from autogpt.config import Config
+from autonomousgpt.config import Config
 
 
 class TestConfig(unittest.TestCase):
