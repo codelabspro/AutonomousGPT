@@ -124,6 +124,8 @@ pip install -r requirements.txt
 
 ```
 python -m autonomousgpt
+
+python -m autonomousgpt --gpt3only --debug
 ```
 
 2. After each of action, enter 'y' to authorise command, 'y -N' to run N continuous commands, 'n' to exit program, or enter additional feedback for the AI.
